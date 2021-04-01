@@ -1,6 +1,9 @@
 # Databricks notebook source
-# MAGIC %md # Files dog-fooding
-# MAGIC 
+# MAGIC %md # Instructions
+
+# COMMAND ----------
+
+# MAGIC %md 
 # MAGIC ## Part 1: Developing sharable Python code
 # MAGIC You are a data scientist who has just joined a team. Your team works on analyzing wine quality. You noticed that your team members have been copying and pasting Python utility functions across their individual notebook. Your task is to create a shared library that can be used across different notebooks
 # MAGIC 
@@ -30,11 +33,15 @@
 # COMMAND ----------
 
 # MAGIC %md 
-# MAGIC ## Extension-- Unit testing 
+# MAGIC ## Part 3: Unit testing
 # MAGIC 
-# MAGIC Your utils.py library works well. However, your team is starting to make changes to it and sometimes breaks the functionality of that module. You'd like to develop unit tests for this library. 
+# MAGIC Your utils.py library works well. However, your team is starting to make changes to it and sometimes breaks the functionality of that module. You'd like to develop unit tests for this library.
 # MAGIC 
-# MAGIC Start by creating a notebook called "utils_test" that invokes the utils.py library. If this notebook runs without failures, then the unit tests for utils.py passes. 
+# MAGIC Start by creating a notebook called "utils_test" that invokes the utils.py library. If this notebook runs without failures, then the unit tests for utils.py passes.
+
+# COMMAND ----------
+
+# MAGIC %md 
 # MAGIC 
 # MAGIC ## Extension-- CI/CD
 # MAGIC 
