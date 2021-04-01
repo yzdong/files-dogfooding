@@ -10,8 +10,6 @@
 # MAGIC In this repo, you'll find 2 of your coworkers' code, Abby and Zach. Find a way to refactor out shared code such that both their notebooks run. 
 # MAGIC 
 # MAGIC Start by creating a new file in the file navigator called "utils.py"
-# MAGIC 
-# MAGIC Adapted from https://docs.databricks.com/_static/notebooks/mlflow/mlflow-end-to-end-example-aws.html
 
 # COMMAND ----------
 
