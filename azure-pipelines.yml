@@ -10,17 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    echo "Calling repos Update API to update branch."
+    echo "Calling Repos Update API to update branch."
     curl -n -X PATCH https://e2-dogfood.staging.cloud.databricks.com/api/2.0/repos/2351388579479538 \
       -H 'Authorization: Bearer '$(DATABRICKS-PAT) \
       -d '{"branch": "master"}'
   env: 
     DATABRICKS-PAT: $(DATABRICKS-PAT)
 
-  displayName: 'Run a multi-line script'
+  displayName: 'Update Repos to latest'
