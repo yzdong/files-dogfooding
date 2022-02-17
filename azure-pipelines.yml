@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# - script: echo Hello, world!
-#   displayName: 'Run a one-line script'
 
 - script: |
     echo "Calling Repos Update API to update branch."
@@ -51,3 +49,6 @@ steps:
         "timeout_seconds": 86400
       }
     ]}'
+  env: 
+      DATABRICKS-PAT: $(DATABRICKS-PAT)
+  displayName: 'Run job on updated Repos'
