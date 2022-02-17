@@ -22,3 +22,32 @@ steps:
     DATABRICKS-PAT: $(DATABRICKS-PAT)
 
   displayName: 'Update Repos to latest'
+
+- script: |
+    echo "Calling Jobs RunsSubmit API to start a job."
+    curl -n -X POST https://e2-dogfood.staging.cloud.databricks.com/api/2.1/jobs/runs/submit \
+     -H 'Authorization: Bearer '$(DATABRICKS-PAT) \
+     -d '{"tasks": [
+        {
+          "task_key": "Abby Wine Acid Analysis",
+          "new_cluster": {
+            "spark_version": "7.3.x-scala2.12",
+            "node_type_id": "i3.xlarge",
+            "spark_conf": {
+              "spark.speculation": true
+            },
+          "aws_attributes": {
+            "availability": "SPOT",
+            "zone_id": "us-west-2a"
+          },
+          "autoscale": {
+            "min_workers": 2,
+            "max_workers": 16
+          }
+        },
+        "notebook_task": {
+          "notebook_path": "/Repos/zi.dong@databricks.com/files-dogfooding/Abby - Wine acid analysis"
+        },
+        "timeout_seconds": 86400
+      }
+    ]}'
