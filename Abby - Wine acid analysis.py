@@ -32,9 +32,7 @@ display(data)
 
 # COMMAND ----------
 
-from datetime import datetime
-
-display(datetime.now())
+# MAGIC %sql select current_date()
 
 # COMMAND ----------
 
