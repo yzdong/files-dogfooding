@@ -28,6 +28,16 @@ data = data[data['residual_sugar'] <= 2]
 
 # COMMAND ----------
 
+display(data)
+
+# COMMAND ----------
+
+from datetime import datetime
+
+display(datetime.now())
+
+# COMMAND ----------
+
 # Visualize relationship between high fixed acidity and other wine attributes 
 import matplotlib.pyplot as plt
 
