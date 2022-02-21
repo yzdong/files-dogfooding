@@ -32,7 +32,7 @@ display(data)
 
 # COMMAND ----------
 
-# MAGIC %sql select current_date()
+# MAGIC %sql select current_timestamp()
 
 # COMMAND ----------
 
