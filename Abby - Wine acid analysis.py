@@ -36,6 +36,8 @@ display(data)
 
 # COMMAND ----------
 
+# COMMAND ----------
+
 # Visualize relationship between high fixed acidity and other wine attributes 
 import matplotlib.pyplot as plt
 
