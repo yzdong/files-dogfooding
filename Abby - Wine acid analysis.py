@@ -36,6 +36,8 @@ display(data)
 
 # COMMAND ----------
 
+# blah 
+
 # COMMAND ----------
 
 # Visualize relationship between high fixed acidity and other wine attributes 
